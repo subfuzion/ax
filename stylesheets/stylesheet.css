@@ -103,21 +103,21 @@ header h2 {
 }
 
 a.button {
-  -moz-border-radius: 30px;
-  -webkit-border-radius: 30px;                     
-  border-radius: 30px;
+  -moz-border-radius: 22px;
+  -webkit-border-radius: 22px;                     
+  border-radius: 22px;
   border-top: solid 1px #cbcbcb;
   border-left: solid 1px #b7b7b7;
   border-right: solid 1px #b7b7b7;
   border-bottom: solid 1px #b3b3b3;
   color: #303030;
-  line-height: 25px;
+  line-height: 20px;
   font-weight: bold;
-  font-size: 15px;
-  padding: 12px 8px 12px 8px;
+  font-size: 14px;
+  padding: 8px 8px 8px 8px;
   display: block;
   float: left;
-  width: 179px;
+  width: 162px;
   margin-right: 14px;  
   background: #fdfdfd; /* Old browsers */
   background: -moz-linear-gradient(top,  #fdfdfd 0%, #f2f2f2 100%); /* FF3.6+ */
@@ -149,7 +149,7 @@ a.button:hover {
 a.button span {
   padding-left: 50px;
   display: block;
-  height: 23px;
+  height: 20px;
 }
 
 #download-zip span {

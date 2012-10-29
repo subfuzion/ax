@@ -51,6 +51,7 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="about.html">About</a></li>
+              <li><a href="#contact">Contact</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Code <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -84,18 +85,23 @@
       </div>
 
       <!-- Example row of columns -->
-
-      <div class="tabbable">
-	      <ul class="nav nav-pills">
-	      	<li class="active"><a href="#pane1" data-toggle="tab">Actors</a></li>
-	      	<li><a href="#pane2" data-toggle="tab">Remoting</a></li>
-	      	<li><a href="#pane3" data-toggle="tab">Supervision</a></li>
-	      </ul>
+      <div class="row">
+        <div class="span4">
+          <h2>Actors</h2>
+          <p>Actors are very lightweight concurrent entities. They process messages asynchronously using an event-driven receive loop. Pattern matching against messages is a convenient way to express an actor's behavior. They raise the abstraction level and make it much easier to write, test, understand and maintain concurrent and/or distributed systems. You focus on workflow, how the messages flow in the system, instead of low level primitives like threads, locks and socket IO. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Remoting</h2>
+          <p>Actors are location transparent and distributable by design. This means that you can write your application without hardcoding how it will be deployed and distributed, and then later just configure your actor system against a certain topology with all of the application’s semantics, including actor supervision, retained. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Supervision</h2>
+          <p>Actors form a tree with actors being parents to the actors they've created. As a parent, the actor is responsible for handling its children’s failures (so-called supervision), forming a chain of responsibility, all the way to the top. When an actor crashes, its parent can either restart or stop it, or escalate the failure up the hierarchy of actors. This enables a clean set of semantics for managing failures in a concurrent, distributed system and allows for writing highly fault-tolerant systems that self-heal</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
       </div>
-
-      <div class="tab-content">
-		  <div id="pane1" class="tab-pane active">
-		      <p>Actors are very lightweight concurrent entities. They process messages asynchronously using an event-driven receive loop. Pattern matching against messages is a convenient way to express an actor's behavior. They raise the abstraction level and make it much easier to write, test, understand and maintain concurrent and/or distributed systems. You focus on workflow, how the messages flow in the system, instead of low level primitives like threads, locks and socket IO. </p>
 
       <div class="row">
       	<div class="span6">
@@ -138,41 +144,11 @@ internal class Program
       		<p/>
       	</div>
       </div>
-		  </div>
-
-		  <div id="pane2" class="tab-pane">
-		     <p>Actors are location transparent and distributable by design. This means that you can write your application without hardcoding how it will be deployed and distributed, and then later just configure your actor system against a certain topology retaining all of the application’s semantics, including actor supervision. </p>
-		  </div>
-
-		  <div id="pane3" class="tab-pane">
-		      <p>Actors form a tree with actors being parents to the actors they've created. As a parent, the actor is responsible for handling its children’s failures (so-called supervision), forming a chain of responsibility, all the way to the top. When an actor crashes, its parent can either restart or stop it, or escalate the failure up the hierarchy of actors. This enables a clean set of semantics for managing failures in a concurrent, distributed system and allows for writing highly fault-tolerant systems that self-heal. </p>
-		 </div>
-     </div>
-
-     <!--
-      <div class="row">
-        <div class="span4">
-          <h2>Actors</h2>
-          <p>Actors are very lightweight concurrent entities. They process messages asynchronously using an event-driven receive loop. Pattern matching against messages is a convenient way to express an actor's behavior. They raise the abstraction level and make it much easier to write, test, understand and maintain concurrent and/or distributed systems. You focus on workflow, how the messages flow in the system, instead of low level primitives like threads, locks and socket IO. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="span4">
-          <h2>Remoting</h2>
-          <p>Actors are location transparent and distributable by design. This means that you can write your application without hardcoding how it will be deployed and distributed, and then later just configure your actor system against a certain topology with all of the application’s semantics, including actor supervision, retained. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Supervision</h2>
-          <p>Actors form a tree with actors being parents to the actors they've created. As a parent, the actor is responsible for handling its children’s failures (so-called supervision), forming a chain of responsibility, all the way to the top. When an actor crashes, its parent can either restart or stop it, or escalate the failure up the hierarchy of actors. This enables a clean set of semantics for managing failures in a concurrent, distributed system and allows for writing highly fault-tolerant systems that self-heal</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-      </div>
- 	 -->
 
       <hr>
 
       <footer>
-	      <p>&copy; 2012, Subfuzion, Inc. AX is Open Source and available under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License 2.0</a></p>
+        <p>&copy; 2012, Subfuzion, Inc. AX is Open Source and available under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License 2.0</a></p>
       </footer>
 
     </div> <!-- /container -->
@@ -192,18 +168,5 @@ internal class Program
 	</script>
 
 	<script type="text/javascript" src="js/prettify.js"></script>
-
-	<script type="text/javascript">
-
-		$(document).ready(function() {
-
-		});
-
-		function showTab(name) {
-
-		}
-
-		//$("actors-tab").click
-	</script>
   </body>
 </html>

@@ -1,0 +1,18 @@
+a.purple-button {
+  background: url(../img/purple-button.png) no-repeat bottom center;
+  height: 41px;
+  font-family: "CorbelRegular", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 41px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #000;
+  color: #A099FF;
+  width: 188px;
+  float: left;
+  margin-left: 0px;
+}
+a:hover.purple-button {
+  background: url(../img/purple-button.png) no-repeat top center;
+  color: #e1deff;
+}

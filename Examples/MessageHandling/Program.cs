@@ -18,7 +18,7 @@
 // limitations under the License.
 // ========================================================================
 
-namespace ActorMessagesHandling
+namespace MessagesHandling
 {
 	using System;
 	using Ax;

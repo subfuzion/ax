@@ -95,7 +95,16 @@ namespace Ax.Helpers
 
 			if (methodInfo == null) return false;
 
-			result = methodInfo.Invoke(o, BindingFlags.Instance, null, parameters, null);
+			try
+			{
+				result = methodInfo.Invoke(o, BindingFlags.Instance, null, parameters, null);
+			}
+			catch (TargetInvocationException e)
+			{
+				// if the actor raises an exception, we want to surface it to the caller (if expecting a result)
+				throw e.InnerException;
+			}
+
 			return true;
 		}
 	}

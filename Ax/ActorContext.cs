@@ -143,7 +143,7 @@ namespace Ax
 		{
 			if (!SenderAsked) throw new AxException("Sender did not ask for a reply");
 // ReSharper disable UseMethodIsInstanceOfType
-			if (message != null && !(Message.ResultType.IsAssignableFrom(message.GetType())))
+			if (message != null && !(message is Exception) && !(Message.ResultType.IsAssignableFrom(message.GetType())))
 // ReSharper restore UseMethodIsInstanceOfType
 			{
 				throw new AxException(
@@ -169,8 +169,15 @@ namespace Ax
 		/// <returns></returns>
 		internal async Task<TResult> GetReplyAsync<TResult>()
 		{
-			var replyMessage = (TResult) await _replyBuffer.ReceiveAsync();
-			return replyMessage;
+			var replyMessage = await _replyBuffer.ReceiveAsync();
+
+			var exception = replyMessage as Exception;
+			if (exception != null)
+			{
+				throw exception;
+			}
+
+			return (TResult)replyMessage;
 		}
 	}
 }

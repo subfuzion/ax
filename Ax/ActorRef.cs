@@ -140,7 +140,13 @@ namespace Ax
 				}
 				catch (Exception e)
 				{
-					Console.WriteLine(e.Message);
+					Console.WriteLine("[System] Actor crashed, creating new instance ({0})", e.Message);
+
+					if (_actor.Context.SenderAsked)
+					{
+						_actor.Context.Reply(e);
+					}
+
 					_system.RestartActor(this, e);
 				}
 			}

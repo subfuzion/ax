@@ -126,7 +126,7 @@ internal class Program
   {
     var system = new ActorSystem("example");
 
-    var actorRef = system.ActorOf<GreetingActor>();
+    var actorRef = system.ActorOf&lt;GreetingActor&rt;();
 
     actorRef.Tell("world");
 

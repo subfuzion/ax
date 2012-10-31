@@ -24,7 +24,19 @@ namespace Ax
 
 	public abstract class Actor
 	{
-		public string Name { get; internal set; }
+		private Guid _id = Guid.NewGuid();
+		private string _name;
+
+		public Guid ID
+		{
+			get { return _id; }
+		}
+
+		public string Name
+		{
+			get { return _name ?? ID.ToString(); }
+			internal set { _name = value; }
+		}
 
 		/// <summary>
 		/// Gets the current context, which is updated for each message that is dequeued.

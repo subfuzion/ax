@@ -39,6 +39,7 @@
   <ItemGroup>
     <Compile Include="ActorPathTest.cs" />
     <Compile Include="Actors\GreetingActor.cs" />
+    <Compile Include="Actors\MathActor.cs" />
     <Compile Include="Actors\SimpleActor.cs" />
     <Compile Include="ActorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

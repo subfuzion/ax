@@ -33,8 +33,8 @@ namespace ExceptionHandling
 
 		public int Divide(int dividend, int divisor)
 		{
-			// No divide by zero check...
-			return dividend/divisor;
+			// intentional no divide by zero check...
+			return dividend / divisor;
 		}
 	}
 
@@ -62,9 +62,10 @@ namespace ExceptionHandling
 
 			Parallel.ForEach(samples, sample =>
 			{
+				var future = actorRef.Ask<int>(sample.Item1, sample.Item2);
+
 				try
 				{
-					var future = actorRef.Ask<int>(sample.Item1, sample.Item2);
 					future.Wait();
 					Console.WriteLine("(Sample #{0}) {1} / {2} = {3}", sample.Item3, sample.Item1, sample.Item2, future.Result);
 				}

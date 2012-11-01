@@ -21,7 +21,6 @@
 namespace Ax.Tests
 {
 	using System;
-	using System.Linq;
 	using System.Threading;
 	using Actors;
 	using NUnit.Framework;
@@ -89,7 +88,6 @@ namespace Ax.Tests
 			{
 				// second division - should fail
 				future2.Wait();
-				mathResult = future2.Result;
 				Assert.Fail("shouldn't get here, expected an exception");
 			}
 			catch(AggregateException e)

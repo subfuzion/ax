@@ -1,5 +1,6 @@
-﻿# General
+# General
 Thumbs.db
+.DS_Store
 
 # Visual Studio 
 *.aps

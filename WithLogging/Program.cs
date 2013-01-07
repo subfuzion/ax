@@ -1,5 +1,5 @@
 ﻿// ========================================================================
-// ActorRefFactory.cs
+// Program.cs
 // AX - Actor Extensions Framework for .NET
 // http://axframework.io
 // 
@@ -27,16 +27,22 @@
 // SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // ========================================================================
 
-namespace Ax
+namespace WithLogging
 {
-	public abstract class ActorRefFactory
+	using System;
+	using Common.Logging;
+	using Common.Logging.Simple;
+
+	internal class Program
 	{
-		public abstract ActorRef ActorOf<T>() where T : Actor;
+		private static void Main(string[] args)
+		{
+			var log = LogManager.GetLogger(typeof (ConsoleOutLoggerFactoryAdapter));
+			log.Trace("Hello, world");
 
-		public abstract ActorRef ActorOf(Props props);
 
-		public abstract ActorRef ActorOf(Props props, string name);
-
-		public abstract void Stop(ActorRef actor);
+			Console.WriteLine("press any key to exit");
+			Console.ReadKey();
+		}
 	}
 }

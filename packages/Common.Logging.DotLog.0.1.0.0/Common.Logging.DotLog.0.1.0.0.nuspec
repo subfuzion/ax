@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Common.Logging.DotLog</id>
+    <version>0.1.0.0</version>
+    <authors>Tony Pujals</authors>
+    <owners>Tony Pujals</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/tonypujals/dotlog</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Common Logging Adapter for DotLog</description>
+    <releaseNotes>Provides a factory and adapter for DotLog's FileLogger.</releaseNotes>
+    <copyright>Copyright (c) 2012, Tony Pujals</copyright>
+    <tags>Log Logging</tags>
+    <dependencies>
+      <dependency id="DotLog" version="0.1" />
+      <dependency id="Common.Logging" version="2.1.1" />
+    </dependencies>
+  </metadata>
+</package>
